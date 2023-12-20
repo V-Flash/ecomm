@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    
+    <link rel="stylesheet" href="">
+
+    <link rel="stylesheet" href="css/style2.css">
+
+  </head>
+
+  <body>
+
+<!-------------------------------- Navbar -------------------------------->
+
+  <header class="topbar">
+      <div class="container">
+        <div class="row">
+          <!-- social icon-->
+          <div class="col-sm-12">
+            <ul class="social-network">
+              <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
+    <div class="container-fluid">
+
+    <div class="col-lg-2 col-sm-3 col-3 logo-div text-center">
+
+      <a class="navbar-brand" href="#">LOGO</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon open-side-menu first"></span>
+      </button>
+
+    </div>
+
+
+    <div class="collapse navbar-collapse justify-content-center col-lg-6 col-12" id="navbarResponsive">
+
+    <ul class="navbar-nav ml-auto ">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li class="dropdown-submenu dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Nested Dropdown
+            </a>
+            <ul class="dropdown-menu nested-dropdown">
+                <li><a class="dropdown-item" href="#">Nested Action 1</a></li>
+                <li><a class="dropdown-item" href="#">Nested Action 2</a></li>
+            </ul>
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+
+    </ul>
+
+        
+    </div>
+
+      <div class="col-lg-3 col-9">
+        
+        <ul class="navbar-nav ml-auto nav-3 justify-content-center ">
+
+          <button type="button" class="btn btn-link search-open nav-btn-link position-relative">
+            
+            <div>
+              <i class="bi bi-search nav-icon menu-search-icon"></i>
+            </div>  
+
+            
+
+  
+          </button>
+  
+          </button>
+
+          <button type="button" class="btn btn-link nav-btn-link position-relative">
+            
+            <div>
+              <i class="bi bi-heart nav-icon"></i>
+            </div>  
+            <div class="ml-20">
+              <h5 class="nav-link-title">Wishlist</h5>
+              <p class="count">10</p>
+            </div>
+
+          </button>
+
+          <button type="button" class="btn btn-link nav-btn-link position-relative" data-bs-toggle="offcanvas" data-bs-target="#cart1"> 
+            <div class="position-relative">
+              <i class="bi bi-bag nav-icon"></i>
+              <span class="position-absolute top-0 start-100 translate-bottom badge rounded-pill bg-primary badge-custom">3</span>
+            </div>
+
+            <div class="ml-20">
+              <h5 class="nav-link-title">Cart</h5>
+              <p class="count">$150</p>
+            </div>
+          </button>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+<!-------------------------------- Navbar -------------------------------->
+
+<div class="menu-search-container">
+  <div class="menu-search-input">
+  
+    <form action="" class="search-form">
+      <div class="input-group mb-3 search-input">
+
+        <input type="search" class="form-control search-input" placeholder="Search...">
+
+        <button class="btn btn-outline-secondary search-btn" type="button"><i class="fa fa-search"></i></button>
+
+      </div>
+    </form>
+  </div>
+ 
+  <div class="search-sub-menu">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="#">Find a store</a></li>
+    <li><a href="#">Accessories</a></li>
+    <li><a href="#">iPod</a></li>
+    <li><a href="#">iOS</a></li>
+    <li><a href="#">Gift Cards</a></li>
+  </ul>
+</div>
+</div>
+
+
+
+
+<!---------------------------- Mobile Side Menu ---------------------------->
+  
+    <div class="zeynep first" data-menu-name="first">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#" data-submenu="stores">Stores</a>
+
+          <div id="stores" class="submenu">
+            <div class="submenu-header">
+              <a href="#" data-submenu-close="stores">Main Menu</a>
+            </div>
+
+            <label>Stores</label>
+
+            <ul>
+              <li>
+                <a href="#">Istanbul</a>
+              </li>
+
+              <li>
+                <a href="#">Mardin</a>
+              </li>
+
+              <li>
+                <a href="#">Amed</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#" data-submenu="categories">Categories</a>
+
+          <div id="categories" class="submenu">
+            <div class="submenu-header">
+              <a href="#" data-submenu-close="categories">Main Menu</a>
+            </div>
+
+            <label>Categories</label>
+
+            <ul>
+              <li class="has-submenu">
+                <a href="#" data-submenu="electronics">Electronics</a>
+
+                <div id="electronics" class="submenu">
+                  <div class="submenu-header">
+                    <a href="#" data-submenu-close="electronics">Categories</a>
+                  </div>
+
+                  <label>Electronics</label>
+
+                  <ul>
+                    <li>
+                      <a href="#">Camera & Photo</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Home Audio</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Tv & Video</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Computers & Accessories</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Car & Vehicle Electronics</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Portable Audio & Video</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Headphones</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Accessories & Supplies</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Video Projectors</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Office Electronics</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Wearable Technology</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Service Plans</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#">Books</a>
+              </li>
+
+              <li>
+                <a href="#">Video Games</a>
+              </li>
+
+              <li>
+                <a href="#">Computers</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Contact</a>
+        </li>
+
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </div>
+
+<!---------------------------- Mobile Side Menu ---------------------------->
+
+
+
+<!-------------------------------- Slider -------------------------------->
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/slide-1.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-flex h-100">
+          <div class="container d-flex align-items-center">
+            <div class="row">
+              <div class="col-md-10">
+                <div>
+                  <h1 class="text-uppercase fw-bold heading-slider" >Biben dum<br>fringi dictum</h1>
+                  <p class="my-3 para-slider">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p>
+                  <a class="btn btn-primary btn-lg me-2 btn-slider rounded-0" role="button" href="#" >Button</a>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/slide-1.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-flex h-100">
+          <div class="container d-flex align-items-center">
+            <div class="row">
+              <div class="col-md-10">
+                <div>
+                  <h1 class="text-uppercase fw-bold heading-slider">Biben dum<br>fringi dictum</h1>
+                  <p class="my-3 para-slider">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p>
+                  <a class="btn btn-primary btn-lg me-2 btn-slider rounded-0" role="button" href="#" >Button</a>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/slide-1.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-flex h-100">
+          <div class="container d-flex align-items-center">
+            <div class="row">
+              <div class="col-md-10">
+                <div>
+                  <h1 class="text-uppercase fw-bold heading-slider">Biben dum<br>fringi dictum</h1>
+                  <p class="my-3 para-slider">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p>
+                  <a class="btn btn-primary btn-lg me-2 btn-slider rounded-0" role="button" href="#" >Button</a>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+<!-------------------------------- Slider -------------------------------->
+
+
+  
+<!-------------------------------- Cart SideBar -------------------------------->
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cart1">
+
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="offcanvasRightLabel">Cart</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <div class="row">
+          <div class="col-10">
+            <div class="p-2">
+              <img src="img/watch (1).png" alt="" width="70" class="img-fluid rounded shadow-sm">
+              <div class="ml-3 d-inline-block align-middle">
+                <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a></h5><span class="text-muted font-weight-normal font-italic">Category: Electronics</span>
+              </div>
+            </div>
+            <div class="p-2">
+              <strong>Price: $79.00</strong><br>
+              <strong>Quantity: 3</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+<!-------------------------------- Cart SideBar -------------------------------->
+
+  <main>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="img-group">
+              <img src="img/pro1.jpg" class="img-fluid" alt="">
+              <img src="img/pro2.jpg" class="img-fluid" alt="">
+              <img src="img/pro3.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div class="sticky-top product-content text-center">
+              <div class="pt-5 mt-5"></div>
+
+              <h1 class="">Decorative Christmas Fox</h1>
+
+              <h3 class="mb-5 mt-5">£50.00</h3>
+
+              <p class="mb-5 mt-5">From the Holiday Moments Collection This adorable brown fox looking over his right shoulder would be a wonderful accent in any holiday decor. Features faux fur, burlap and canvas creating a unique, textured appearance. The feeling when touched is smooth and lovable.</p>
+
+              <p class="mb-5 mt-5">Accented with a red plaid bow and a small pine spray and pine cone Dimensions: 8″H x 8″W x 3.75″D. Material(s): foam/fabric/plastic. Available colors: Red, Blue, Green, Yellow, Black, White, Grey and Pink. Gift wrapping is available for orders over $99 to the following states: Arizona, Florida, Washington DC and Los Angeles</p>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+<!-------------------------------- Cart SideBar -------------------------------->
+
+
+
+<!-------------------------------- Swiper Slider -------------------------------->
+
+<section class="section-with-carousel section-with-left-offset position-relative mt-5">
+
+  <div class="carousel-wrapper">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="480" src="https://assets.codepen.io/162656/tanzania1.jpg" alt="">
+            <!-- <figcaption>
+             
+            </figcaption> -->
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania2.jpg" alt="">
+            
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania3.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania4.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania5.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="480" src="https://assets.codepen.io/162656/tanzania6.jpg" alt="">
+           
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania7.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania8.jpg" alt="">
+            
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <div class="carousel-control carousel-control-left">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+        <path fill-rule="evenodd" d="M10.78 19.03a.75.75 0 01-1.06 0l-6.25-6.25a.75.75 0 010-1.06l6.25-6.25a.75.75 0 111.06 1.06L5.81 11.5h14.44a.75.75 0 010 1.5H5.81l4.97 4.97a.75.75 0 010 1.06z"></path>
+      </svg>
+    </div>
+    <div class="carousel-control carousel-control-right">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+        <path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 001.06 0l6.25-6.25a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 10-1.06 1.06l4.97 4.97H3.75a.75.75 0 000 1.5h14.44l-4.97 4.97a.75.75 0 000 1.06z"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</section>
+
+<!-------------------------------- Swiper Slider -------------------------------->
+
+  <div class="zeynep-overlay"></div>
+  
+  <a href="#" class="back-to-top" style="display: none;">
+    <i class="bi bi-arrow-up"></i>
+  </a> 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
+
+  <script src="js/zeynep.js" ></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+
+    function addAninActiveClass() {
+      $('.carousel-caption').removeClass('anin-active');
+      $('.carousel-item.active .carousel-caption').addClass('anin-active');
+    }
+
+    addAninActiveClass();
+
+  
+    $('#carouselExampleDark').on('slid.bs.carousel', function() {
+      addAninActiveClass();
+    });
+
+
+    $('#carouselExampleDark').on('slide.bs.carousel', function() {
+      setTimeout(function() {
+        addAninActiveClass();
+      }, 50);
+    });
+   
+  </script>
+
+  <script type="text/javascript">
+    $(".search-open").click(function() {
+      var menuSearchContainer = $(".menu-search-container");
+      var navIcon = $(".menu-search-icon");
+
+      if (menuSearchContainer.is(":hidden")) {
+        
+        menuSearchContainer.slideDown(function() {
+        navIcon.fadeToggle().removeClass("bi-search").addClass("bi-x");
+        });
+
+      } 
+
+      else {
+        
+        menuSearchContainer.slideUp(function() {
+          navIcon.fadeToggle().removeClass("bi-x").addClass("bi-search");
+        });
+
+      }
+      
+    });
+  </script>
+
+  </body>
+</html> 

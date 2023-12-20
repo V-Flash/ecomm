@@ -1,0 +1,14 @@
+
+
+@media (max-width: 1024px){
+
+	.navbar-nav{gap: 20px;flex-direction: row;}
+
+}
+
+@media (max-width: 991px){
+
+	.nav-3 {justify-content: end !important;}
+
+	.logo-div{display: flex;align-items: center;justify-content: start;}
+}	

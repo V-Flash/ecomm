@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button {
+  border: none;
+  background: none;
+}
+
+a,
+a:hover {
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  max-width: 1100px;
+}
+
+.section-with-carousel .swiper-slide figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-with-carousel .swiper-slide img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.section-with-carousel .swiper-slide figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(20%);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+}
+
+.section-with-carousel .swiper-slide figcaption svg {
+  flex-shrink: 0;
+  fill: white;
+  margin-right: 10px;
+}
+
+.section-with-carousel .swiper-slide-active figcaption {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.section-with-carousel .carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  z-index: 1;
+}
+
+.section-with-carousel .carousel-controls .carousel-control {
+  opacity: 0.25;
+  transition: opacity 0.3s;
+}
+
+.section-with-carousel .carousel-controls .carousel-control:hover {
+  opacity: 1;
+}
+
+.section-with-carousel .swiper-pagination-bullets {
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.section-with-carousel .swiper-pagination-bullets .swiper-pagination-bullet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background: transparent;
+  opacity: 0.5;
+  margin: 0 8px;
+  border-radius: 0;
+  transition: opacity 0.3s;
+}
+
+.section-with-carousel
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet
+  .line {
+  width: 3px;
+  height: 3px;
+  background: black;
+  transition: transform 0.3s;
+}
+
+.section-with-carousel
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet
+  .number {
+  opacity: 0;
+  transform: translateY(-7px);
+  transition: all 0.3s;
+}
+
+.section-with-carousel
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.section-with-carousel
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet.swiper-pagination-bullet-active
+  .line {
+  transform: scaleX(8);
+}
+
+.section-with-carousel
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet.swiper-pagination-bullet-active
+  .number {
+  opacity: 1;
+  transform: none;
+}
+
+.copyright .col-auto:not(:last-child) {
+  position: relative;
+}
+
+.copyright .col-auto:not(:last-child)::before {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .section-with-carousel .swiper-slide img {
+    height: 370px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-with-carousel .swiper-slide img {
+    height: 420px;
+  }
+
+  .section-with-carousel .carousel-controls {
+    padding: 0 50px;
+  }
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  z-index: 1;
+  background: white;
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
+}
+
+
+
+  </style>
+
+</head>
+<body>
+
+
+
+
+
+<section class="section-with-carousel section-with-left-offset position-relative mt-5">
+
+  <div class="carousel-wrapper">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="480" src="https://assets.codepen.io/162656/tanzania1.jpg" alt="">
+            <!-- <figcaption>
+             
+            </figcaption> -->
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania2.jpg" alt="">
+            
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania3.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania4.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania5.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="480" src="https://assets.codepen.io/162656/tanzania6.jpg" alt="">
+           
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania7.jpg" alt="">
+            
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure>
+            <img width="640" height="427" src="https://assets.codepen.io/162656/tanzania8.jpg" alt="">
+            
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <div class="carousel-control carousel-control-left">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+        <path fill-rule="evenodd" d="M10.78 19.03a.75.75 0 01-1.06 0l-6.25-6.25a.75.75 0 010-1.06l6.25-6.25a.75.75 0 111.06 1.06L5.81 11.5h14.44a.75.75 0 010 1.5H5.81l4.97 4.97a.75.75 0 010 1.06z"></path>
+      </svg>
+    </div>
+    <div class="carousel-control carousel-control-right">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+        <path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 001.06 0l6.25-6.25a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 10-1.06 1.06l4.97 4.97H3.75a.75.75 0 000 1.5h14.44l-4.97 4.97a.75.75 0 000 1.06z"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</section>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
+
+<script>
+
+const sectionsWithCarousel = document.querySelectorAll(
+  ".section-with-carousel"
+);
+
+createOffsets();
+window.addEventListener("resize", createOffsets);
+
+function createOffsets() {
+  const sectionWithLeftOffset = document.querySelector(
+    ".section-with-left-offset"
+  );
+  const sectionWithLeftOffsetCarouselWrapper = sectionWithLeftOffset.querySelector(
+    ".carousel-wrapper"
+  );
+  
+  
+  const offset = (window.innerWidth - 1100) / 2;
+  const mqLarge = window.matchMedia("(min-width: 1200px)");
+
+  if (sectionWithLeftOffset && mqLarge.matches) {
+    sectionWithLeftOffsetCarouselWrapper.style.marginLeft = offset + "px";
+  } else {
+    sectionWithLeftOffsetCarouselWrapper.style.marginLeft = 0;
+  }
+
+
+}
+
+for (const section of sectionsWithCarousel) {
+  let slidesPerView = [1.5, 2.5, 3.5];
+  if (section.classList.contains("section-with-left-offset")) {
+    slidesPerView = [1.5, 1.5, 2.5];
+  }
+  const swiper = section.querySelector(".swiper");
+  new Swiper(swiper, {
+    slidesPerView: slidesPerView[0],
+    spaceBetween: 15,
+    loop: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
+    },
+    navigation: {
+      prevEl: section.querySelector(".carousel-control-left"),
+      nextEl: section.querySelector(".carousel-control-right")
+    },
+    pagination: {
+      el: section.querySelector(".swiper-pagination"),
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class=${className}>
+            <span class="number">${index + 1}</span>
+            <span class="line"></span>
+        </div>`;
+      }
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: slidesPerView[1]
+      },
+      1200: {
+        slidesPerView: slidesPerView[2]
+      }
+    }
+  });
+}
+
+</script>
+
+</body>
+</html>
