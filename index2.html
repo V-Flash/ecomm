@@ -37,7 +37,7 @@
       </div>
   </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
+  <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear header_sticky">
     <div class="container-fluid">
 
     <div class="col-lg-2 col-sm-3 col-3 logo-div text-center">
@@ -120,9 +120,6 @@
               <i class="bi bi-search nav-icon menu-search-icon"></i>
             </div>  
 
-            
-
-  
           </button>
   
           </button>
@@ -132,10 +129,10 @@
             <div>
               <i class="bi bi-heart nav-icon"></i>
             </div>  
-            <div class="ml-20">
+            <!-- <div class="ml-20">
               <h5 class="nav-link-title">Wishlist</h5>
               <p class="count">10</p>
-            </div>
+            </div> -->
 
           </button>
 
@@ -145,10 +142,10 @@
               <span class="position-absolute top-0 start-100 translate-bottom badge rounded-pill bg-primary badge-custom">3</span>
             </div>
 
-            <div class="ml-20">
+           <!--  <div class="ml-20">
               <h5 class="nav-link-title">Cart</h5>
               <p class="count">$150</p>
-            </div>
+            </div> -->
           </button>
 
         </ul>
@@ -161,6 +158,15 @@
 <!-------------------------------- Navbar -------------------------------->
 
 <div class="menu-search-container">
+
+  <button type="button" class="btn btn-link search-close">
+            
+    <div>
+      <i class="bi bi-x search-icon-close"></i>
+    </div>  
+
+  </button>
+  
   <div class="menu-search-input">
   
     <form action="" class="search-form">
@@ -172,18 +178,19 @@
 
       </div>
     </form>
+
   </div>
  
-  <div class="search-sub-menu">
-  <h3>Quick Links</h3>
-  <ul>
-    <li><a href="#">Find a store</a></li>
-    <li><a href="#">Accessories</a></li>
-    <li><a href="#">iPod</a></li>
-    <li><a href="#">iOS</a></li>
-    <li><a href="#">Gift Cards</a></li>
-  </ul>
-</div>
+    <div class="search-sub-menu">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Find a store</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">iPod</a></li>
+        <li><a href="#">iOS</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
 </div>
 
 
@@ -560,7 +567,6 @@
 
   <script src="js/zeynep.js" ></script>
 
-  <script src="js/main.js"></script>
 
   <script>
 
@@ -586,28 +592,158 @@
   </script>
 
   <script type="text/javascript">
+
     $(".search-open").click(function() {
+
       var menuSearchContainer = $(".menu-search-container");
       var navIcon = $(".menu-search-icon");
 
       if (menuSearchContainer.is(":hidden")) {
         
         menuSearchContainer.slideDown(function() {
-        navIcon.fadeToggle().removeClass("bi-search").addClass("bi-x");
+          // navIcon.fadeToggle().removeClass("bi-search").addClass("bi-x");
+          navIcon.css({"visibility":"hidden"}).fadeTo("slow", 0);
         });
 
       } 
 
-      else {
+      // else {
         
-        menuSearchContainer.slideUp(function() {
-          navIcon.fadeToggle().removeClass("bi-x").addClass("bi-search");
-        });
+      //   menuSearchContainer.slideUp(function() {
+      //     // navIcon.fadeToggle().removeClass("bi-x").addClass("bi-search");
+      //   });
 
+      // }
+
+    });
+
+
+
+    $(".search-close").click(function() {
+      var navIcon = $(".menu-search-icon");
+      $(".menu-search-container").slideUp();
+      navIcon.css({"visibility":"visible"}).fadeTo("slow", 1);
+    });
+    
+  </script>
+
+  <script type="text/javascript">
+    var lastScrollTop = 0;
+    var isScrollingUp = false;
+
+    var isPageRefreshed = sessionStorage.getItem('isPageRefreshed');
+
+    if (isPageRefreshed) {
+      sessionStorage.removeItem('isPageRefreshed');
+    } else {
+      $(document).scrollTop(0);
+    }
+
+
+    $(window).scroll(function () {
+
+      var scrollTop = $(this).scrollTop();
+
+      if ($(window).scrollTop() === 0) {
+        $(".header_sticky").removeClass("header_sticky-active");
+        $(".product-content").css({"top":"0px"}); 
       }
-      
+
+      if (scrollTop > lastScrollTop) {
+        if (isScrollingUp) {
+          isScrollingUp = false;
+          $(".header_sticky").removeClass("header_sticky-active");    
+          $(".product-content").css({"top":"0px"}); 
+        }
+      } 
+      else {
+        if (!isScrollingUp) {
+          isScrollingUp = true;
+          $(".header_sticky").addClass("header_sticky-active"); 
+          $(".product-content").css({"top":"50px"}); 
+        }
+      }
+
+      lastScrollTop = scrollTop;
+
+    });
+
+
+    $(window).on('beforeunload', function () {
+      sessionStorage.setItem('isPageRefreshed', 'true');
     });
   </script>
+
+  <script>
+
+const sectionsWithCarousel = document.querySelectorAll(
+  ".section-with-carousel"
+);
+
+createOffsets();
+window.addEventListener("resize", createOffsets);
+
+function createOffsets() {
+  const sectionWithLeftOffset = document.querySelector(
+    ".section-with-left-offset"
+  );
+  const sectionWithLeftOffsetCarouselWrapper = sectionWithLeftOffset.querySelector(
+    ".carousel-wrapper"
+  );
+  
+  
+  const offset = (window.innerWidth - 1100) / 2;
+  const mqLarge = window.matchMedia("(min-width: 1200px)");
+
+  if (sectionWithLeftOffset && mqLarge.matches) {
+    sectionWithLeftOffsetCarouselWrapper.style.marginLeft = offset + "px";
+  } else {
+    sectionWithLeftOffsetCarouselWrapper.style.marginLeft = 0;
+  }
+
+
+}
+
+for (const section of sectionsWithCarousel) {
+  let slidesPerView = [1.5, 2.5, 3.5];
+  if (section.classList.contains("section-with-left-offset")) {
+    slidesPerView = [1.5, 1.5, 2.5];
+  }
+  const swiper = section.querySelector(".swiper");
+  new Swiper(swiper, {
+    slidesPerView: slidesPerView[0],
+    spaceBetween: 15,
+    loop: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
+    },
+    navigation: {
+      prevEl: section.querySelector(".carousel-control-left"),
+      nextEl: section.querySelector(".carousel-control-right")
+    },
+    pagination: {
+      el: section.querySelector(".swiper-pagination"),
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class=${className}>
+            <span class="number">${index + 1}</span>
+            <span class="line"></span>
+        </div>`;
+      }
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: slidesPerView[1]
+      },
+      1200: {
+        slidesPerView: slidesPerView[2]
+      }
+    }
+  });
+}
+
+</script>
 
   </body>
 </html> 
